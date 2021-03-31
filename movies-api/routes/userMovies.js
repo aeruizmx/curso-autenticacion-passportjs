@@ -39,7 +39,7 @@ function userMoviesApi(app){
     }
   })
 
-  router.delete('/:userMovieId', validationHandler({ userMovieId: movieIdSchema }), 'params', 
+  router.delete('/:userMovieId', validationHandler({ userMovieId: movieIdSchema }, 'params'), 
   async function (req, res, next) {
     const { userMovieId} = req.params
     try {
