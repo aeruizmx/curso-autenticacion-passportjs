@@ -106,6 +106,7 @@ function authApi(app){
       next(error)
     }
   })
+  
 }
 
 module.exports = authApi
