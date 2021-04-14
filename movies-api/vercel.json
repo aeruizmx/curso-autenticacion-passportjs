@@ -1,0 +1,27 @@
+{
+  "name": "moviesapi",
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.js"
+    }
+  ],
+  "env": {
+    "DB_USER": "@platzivideo-db-user",
+    "DB_PASSWORD": "@platzivideo-db-password",
+    "DB_HOST": "@platzivideo-db-host",
+    "DB_NAME": "@platzivideo-db-name",
+    "DEFAULT_ADMIN_PASSWORD": "@platzivideo-default-admin-password",
+    "DEFAULT_USER_PASSWORD": "@platzivideo-default-user-password",
+    "AUTH_JWT_SECRET": "@platzivideo-auth-jwt-secret",
+    "PUBLIC_API_KEY_TOKEN": "@platzivideo-public-api-key-token",
+    "ADMIN_API_KEY_TOKEN": "@platzivideo-admin-api-key-token"
+  }
+}
